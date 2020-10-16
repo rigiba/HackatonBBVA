@@ -1,6 +1,4 @@
-import React, { Fragment } from 'react';
-// import '../components/styles/Errors.css';
-// import NotFoundImg from '../images/404.png';
+import React from 'react';
 
 const NotFound = () => (
   <div>
