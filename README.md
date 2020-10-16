@@ -8,5 +8,3 @@ Participantes:
   Sergio Casallas
   Sebastian Herrera
   Ricardo Gil
-  
-  
