@@ -3,9 +3,9 @@ import React, { Fragment } from 'react';
 // import NotFoundImg from '../images/404.png';
 
 const NotFound = () => (
-  <div>
+  <Fragment>
     <h1>404 Page</h1>
-  </div>
+  </Fragment>
 );
 
 export default NotFound;
