@@ -32,8 +32,7 @@ export default class Questions extends React.Component {
         buttons={false}
         bullets={false}
         // infinite={false}
-        selected={this.state.selected}
-        animation='open-animation'>
+        selected={this.state.selected}>
         {this.state.data.map((data, i) => {
           return (
             <div key={i}>
