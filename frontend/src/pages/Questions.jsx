@@ -1,22 +1,52 @@
 import React from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import QuestionsList from '../components/QuestionsList';
+import QuestionCategory from '../components/QuestionCategory';
 import '../styles/questions.css';
 
 export default class Questions extends React.Component {
   state = {
-    data: [
-      { id: 1, question: 'blah blah' },
-      { id: 2, question: 'blah blah' },
-      { id: 3, question: 'blah blah' },
+    questions: [
+      {
+        transport: [
+          {
+            question:
+              'Cuanto dias a la semana usas cada uno de estos transportes',
+            answers: [
+              {
+                transportModes: [
+                  ['bicicleta', 5],
+                  ['moto', 0],
+                  ['carro', 3],
+                  ['tren', 0],
+                ],
+              },
+            ],
+          },
+          {
+            question: 'Cuantas horas al dia usas estos transportes',
+          },
+        ],
+      },
+      {
+        food: [],
+      },
+      {
+        energy: [],
+      },
+      {
+        solutionsEcological: [],
+      },
     ],
+
+    data: [],
+
     max: 0,
     selected: 0,
   };
 
   async componentDidMount() {
-    this.setState({ max: this.state.data.length - 1 });
+    this.setState({ max: this.state.questions.length - 1 });
   }
 
   handleChangeQuestion = async (e) => {
@@ -29,20 +59,37 @@ export default class Questions extends React.Component {
   render() {
     return (
       <AwesomeSlider
-        buttons={false}
+        buttons={true}
         bullets={false}
-        // infinite={false}
+        infinite={false}
         selected={this.state.selected}>
-        {this.state.data.map((data, i) => {
+        {/* {this.state.questions.map((questions, i) => {
           return (
             <div key={i}>
               <QuestionsList
-                id={data.id}
-                question={data.question}
+                id={questions.id}
+                question={questions.question}
                 selected={i}
-                max={this.state.data.length}
+                max={this.state.questions.length}
                 handleChangeQuestion={this.handleChangeQuestion}
               />
+            </div>
+          );
+        })} */}
+        {this.state.questions.map((category, i) => {
+          // const { category } = Object.keys(category).join('');
+
+          // if (category === 'transport')
+          //   this.setState({ background_color: '#30697c' });
+          // else if (category === 'food')
+          //   this.setState({ background_color: '#28914b' });
+          // else if (category === 'energy')
+          //   this.setState({ background_color: '#912841' });
+          // else this.setState({ background_color: '#917328' });
+
+          return (
+            <div key={i}>
+              <QuestionCategory category={Object.keys(category).join('')} />
             </div>
           );
         })}
