@@ -136,11 +136,7 @@ export default class Questions extends React.Component {
         })} */}
         {this.state.questions.map((category, i) => {
           return (
-<<<<<<< HEAD
-            <div className="slider">
-=======
             <div key={i} className='slider'>
->>>>>>> questions
               <QuestionCategory
                 category={Object.keys(category).join('')}
                 questions={Object.values(category).flat(1)}
