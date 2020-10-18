@@ -1,0 +1,59 @@
+:root {
+  /* Palette  https://www.happyhues.co/palettes/4 */
+
+  /* Size */
+  --small: 8px;
+  --medium: 16px;
+  --x-medium: 24px;
+  --large: 32px;
+  --x-large: 48px;
+
+  /* Elements */
+  --background: #16161a;
+  --headline: #fffffe;
+  --paragraph: #94a1b2;
+  --button: #7f5af0;
+  --button-text: #fffffe;
+  --link: #7f5af0;
+
+  /* Cards */
+  --card-background: #242629;
+  --card-headline: #fffffe;
+  --card-paragraph: #94a1b2;
+  --card-tag-background: #7f5af0;
+  --card-tag-text: #fffffe;
+
+  /* Illustration */
+  --stroke: #010101;
+  --main: ##fffffe;
+  --highlight: #7f5af0;
+  --secondary: #72757e;
+  --tertiary: #2cb67d;
+}
+
+html {
+  background-color: blue;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+input[type='button'] {
+  font-weight: 900;
+  color: var(--button-text);
+  padding: 1.2rem;
+  border: 1px solid grey;
+  border-radius: 3px;
+  background-color: var(--button);
+  outline: none;
+}
+
+input[type='button']:hover {
+  outline: 2px dashed var(--button);
+  outline-offset: 3px;
+}

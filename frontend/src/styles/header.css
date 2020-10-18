@@ -1,0 +1,24 @@
+.content-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--small);
+  background-color: var(--background);
+  color: var(--headline);
+}
+
+.content-info__images {
+  width: calc(100% - 95%);
+  margin: 0;
+}
+
+.content-info__imagen {
+  width: 100%;
+  margin: 0;
+}
+
+.about {
+  cursor: pointer;
+}

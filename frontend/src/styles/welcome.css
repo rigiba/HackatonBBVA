@@ -1,0 +1,22 @@
+.welcome {
+  background-color: var(--card-background);
+  width: 100%;
+  height: calc(100vh - 10vh);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.welcome__title {
+  background-color: var(--card-background);
+  font-size: 15vh;
+  color: var(--headline);
+  width: 100%;
+  margin: 6rem auto;
+}
+
+.welcome__subtitle {
+  font-size: 3vh;
+  color: var(--paragraph);
+  margin: 0rem auto 5rem auto;
+}
