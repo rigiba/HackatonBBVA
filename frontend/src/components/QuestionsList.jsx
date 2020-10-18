@@ -14,9 +14,11 @@ export default class QuestionsList extends React.Component {
     const { listquestions } = this.props;
     return (
       <div key={{}}>
-        <h1>{listquestions.question}</h1>
-        <Button title={`back`} route='/question' onClick={this.handleClick} />
-        <Button title={`next`} route='/question' onClick={this.handleClick} />
+        <h1 className="slider_pregunta">{listquestions.question}</h1>
+        <div className='contenedor-buttons'>
+          <Button title={`back`} route='/question' onClick={this.handleClick} />
+          <Button title={`next`} route='/question' onClick={this.handleClick} />
+        </div>
       </div>
     );
   }

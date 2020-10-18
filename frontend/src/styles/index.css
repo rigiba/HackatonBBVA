@@ -45,10 +45,12 @@ body {
 }
 
 input[type='button'] {
-  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
   color: var(--button-text);
   padding: 1.2rem;
-  border: 1px solid grey;
+  border: none;
   border-radius: 3px;
   background-color: var(--button);
   outline: none;

@@ -1,3 +1,38 @@
 .awssld__content {
-  background-color: purple;
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor-buttons {
+  width: fit-content;
+  position: relative;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.slider_category input[type='button'] {
+  background-color: var(--button);
+  padding: var(--small) var(--x-large);
+}
+
+.slider_category input[type='button'][value='back'] {
+  background-color: transparent;
+  outline: none;
+  position: absolute;
+  right: 100%;
+}
+
+.slider_pregunta {
+  width: 100%;
+  background-color: red;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  color: var(--headline);
 }

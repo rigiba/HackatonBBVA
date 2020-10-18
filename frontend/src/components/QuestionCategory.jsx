@@ -16,7 +16,7 @@ export default class QuestionCategory extends React.Component {
         <AwesomeSlider>
           {this.props.questions.map((question, i) => {
             return (
-              <div key={i}>
+              <div className="slider_category" key={i}>
                 <QuestionsList listquestions={this.props.questions[i]}/>
               </div>
             );
