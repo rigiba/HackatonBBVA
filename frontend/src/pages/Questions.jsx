@@ -1,22 +1,114 @@
 import React from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import QuestionsList from '../components/QuestionsList';
+import QuestionCategory from '../components/QuestionCategory';
 import '../styles/questions.css';
 
 export default class Questions extends React.Component {
   state = {
-    data: [
-      { id: 1, question: 'blah blah' },
-      { id: 2, question: 'blah blah' },
-      { id: 3, question: 'blah blah' },
+    questions: [
+      {
+
+        transport: [
+          {
+            question:
+              'Cuanto dias a la semana usas cada uno de estos transportes',
+            answers: [
+              {
+                transportModes: [
+                  ['bicicleta', 5],
+                  ['moto', 0],
+                  ['carro', 3],
+                  ['tren', 0],
+                ],
+              },
+            ],
+          },
+          {
+            question: 'Cuantas horas al dia usas estos transportes',
+          },
+          {
+            question: 'Cuantos viajes en avión haces en el año',
+          },
+        ],
+      },
+      {
+        food: [
+          {
+            question:
+              'Conque frecuencia consumes estos productos?',
+            answers: [
+              {
+                foodModes: [
+                  ['carne', 5],
+                  ['snack', 0],
+                  ['enlatados', 3],
+                  ['importados', 0],
+                ],
+              },
+            ],
+          },
+          {
+            question: 'En que pais te encuentras',
+          },
+          {
+            question: 'Con cuantas personas vives',
+          },
+        ],
+      },
+      {
+        energy: [
+          {
+            question:
+              'Selecciona los equipos que tienes',
+            answers: [
+              {
+                energyModes: [
+                  ['calefaccionElectrica', 5],
+                  ['aireAcondicionado', 0],
+                  ['duchaElectrica', 3],
+                  ['calentadorAgas', 0],
+                  ['estufaElectrica', 0],
+                  ['hornoElectrico', 0],
+                ],
+              },
+            ],
+          },
+          {
+            question: 'Cuantas horas al dia usas estos transportes',
+          },
+          {
+            question: 'Cuantos viajes en avión haces en el año',
+          },
+        ],
+      },
+      {
+        solutionsEcological: [
+          {
+            question:
+              'Cuales de estas soluciones tienes instaladas en tu casa?',
+            answers: [
+              {
+                transportModes: [
+                  ['panelsolar', 5],
+                  ['ahorrodeagua', 0],
+                  ['bombilloahorradores', 3],
+                ],
+              },
+            ],
+          },
+        ],
+      },
     ],
+
+    data: [],
+
     max: 0,
     selected: 0,
   };
 
   async componentDidMount() {
-    this.setState({ max: this.state.data.length - 1 });
+    this.setState({ max: this.state.questions.length - 1 });
   }
 
   handleChangeQuestion = async (e) => {
@@ -29,20 +121,29 @@ export default class Questions extends React.Component {
   render() {
     return (
       <AwesomeSlider
-        buttons={false}
+        buttons={true}
         bullets={false}
-        // infinite={false}
+        infinite={false}
         selected={this.state.selected}>
-        {this.state.data.map((data, i) => {
+        {/* {this.state.questions.map((questions, i) => {
           return (
             <div key={i}>
               <QuestionsList
-                id={data.id}
-                question={data.question}
+                id={questions.id}
+                question={questions.question}
                 selected={i}
-                max={this.state.data.length}
+                max={this.state.questions.length}
                 handleChangeQuestion={this.handleChangeQuestion}
               />
+            </div>
+          );
+        })} */}
+        {this.state.questions.map((category, i) => {
+          return (
+            <div>
+              <QuestionCategory
+                key={i}
+                category={Object.keys(category).join('')} questions={Object.values(category).flat(1)} />
             </div>
           );
         })}
