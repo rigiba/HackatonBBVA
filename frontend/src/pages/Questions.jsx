@@ -8,7 +8,6 @@ export default class Questions extends React.Component {
   state = {
     questions: [
       {
-
         transport: [
           {
             question:
@@ -35,8 +34,7 @@ export default class Questions extends React.Component {
       {
         food: [
           {
-            question:
-              'Conque frecuencia consumes estos productos?',
+            question: 'Conque frecuencia consumes estos productos?',
             answers: [
               {
                 foodModes: [
@@ -59,8 +57,7 @@ export default class Questions extends React.Component {
       {
         energy: [
           {
-            question:
-              'Selecciona los equipos que tienes',
+            question: 'Selecciona los equipos que tienes',
             answers: [
               {
                 energyModes: [
@@ -123,7 +120,6 @@ export default class Questions extends React.Component {
       <AwesomeSlider
         buttons={true}
         bullets={false}
-        infinite={false}
         selected={this.state.selected}>
         {/* {this.state.questions.map((questions, i) => {
           return (
@@ -140,10 +136,15 @@ export default class Questions extends React.Component {
         })} */}
         {this.state.questions.map((category, i) => {
           return (
+<<<<<<< HEAD
             <div className="slider">
+=======
+            <div key={i} className='slider'>
+>>>>>>> questions
               <QuestionCategory
-                key={i}
-                category={Object.keys(category).join('')} questions={Object.values(category).flat(1)} />
+                category={Object.keys(category).join('')}
+                questions={Object.values(category).flat(1)}
+              />
             </div>
           );
         })}
