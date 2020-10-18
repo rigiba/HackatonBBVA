@@ -1,3 +1,15 @@
+/* {
+  #03045E
+  #023E8A
+  #0077B6
+  #0096C7
+  #00B4D8
+  #48CAE4
+  #90E0EF
+  #ADE8F4
+  #CAF0F8
+} */
+
 :root {
   /* Palette  https://www.happyhues.co/palettes/4 */
 
@@ -9,15 +21,15 @@
   --x-large: 48px;
 
   /* Elements */
-  --background: #16161a;
+  --background: #023e8a;
   --headline: #fffffe;
-  --paragraph: #94a1b2;
-  --button: #7f5af0;
+  --paragraph: #fffffe;
+  --button: #03045e;
   --button-text: #fffffe;
   --link: #7f5af0;
 
   /* Cards */
-  --card-background: #242629;
+  --card-background: #023e8a;
   --card-headline: #fffffe;
   --card-paragraph: #94a1b2;
   --card-tag-background: #7f5af0;

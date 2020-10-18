@@ -11,7 +11,7 @@ export default class Questions extends React.Component {
         transport: [
           {
             question:
-              'Cuanto dias a la semana usas cada uno de estos transportes',
+              '¿Cuanto dias a la semana usas cada uno de estos transportes',
             answers: [
               {
                 transportModes: [
@@ -24,17 +24,17 @@ export default class Questions extends React.Component {
             ],
           },
           {
-            question: 'Cuantas horas al dia usas estos transportes',
+            question: '¿Cuantas horas al dia usas estos transportes',
           },
           {
-            question: 'Cuantos viajes en avión haces en el año',
+            question: '¿Cuantos viajes en avión haces en el año',
           },
         ],
       },
       {
         food: [
           {
-            question: 'Conque frecuencia consumes estos productos?',
+            question: '¿Conque frecuencia consumes estos productos?',
             answers: [
               {
                 foodModes: [
@@ -47,17 +47,17 @@ export default class Questions extends React.Component {
             ],
           },
           {
-            question: 'En que pais te encuentras',
+            question: '¿En que pais te encuentras',
           },
           {
-            question: 'Con cuantas personas vives',
+            question: '¿Con cuantas personas vives',
           },
         ],
       },
       {
         energy: [
           {
-            question: 'Selecciona los equipos que tienes',
+            question: '¿Selecciona los equipos que tienes',
             answers: [
               {
                 energyModes: [
@@ -72,10 +72,10 @@ export default class Questions extends React.Component {
             ],
           },
           {
-            question: 'Cuantas horas al dia usas estos transportes',
+            question: '¿Cuantas horas al dia usas estos transportes',
           },
           {
-            question: 'Cuantos viajes en avión haces en el año',
+            question: '¿Cuantos viajes en avión haces en el año',
           },
         ],
       },
@@ -83,7 +83,7 @@ export default class Questions extends React.Component {
         solutionsEcological: [
           {
             question:
-              'Cuales de estas soluciones tienes instaladas en tu casa?',
+              '¿Cuales de estas soluciones tienes instaladas en tu casa?',
             answers: [
               {
                 transportModes: [

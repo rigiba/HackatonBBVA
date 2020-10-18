@@ -14,9 +14,11 @@ export default class QuestionsList extends React.Component {
     const { question, selected } = this.props;
     return (
       <div>
-        <span>{selected + 1}</span>
-        <h2 className="slider_pregunta">{question.question}?</h2>
-         <div className='contenedor-buttons'>
+        <div className='contenedor-pregunta'>
+          <span className='question_number'>{selected + 1}</span>
+          <h2 className='slider_pregunta'>{question.question}?</h2>
+        </div>
+        <div className='contenedor-buttons'>
           <Button title={`back`} route='/question' onClick={this.handleClick} />
           <Button title={`next`} route='/question' onClick={this.handleClick} />
         </div>
