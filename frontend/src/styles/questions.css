@@ -16,12 +16,12 @@
   justify-content: center; */
 }
 
-.slider_category input[type='button'] {
+.contenedor-buttons input[type='button'] {
   background-color: var(--button);
   padding: var(--small) var(--x-large);
 }
 
-.slider_category input[type='button'][value='back'] {
+.contenedor-buttons input[type='button'][value='back'] {
   background-color: transparent;
   outline: none;
   position: absolute;
