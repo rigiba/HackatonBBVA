@@ -8,6 +8,7 @@ export default class Questions extends React.Component {
   state = {
     questions: [
       {
+        
         transport: [
           {
             question:
@@ -25,6 +26,9 @@ export default class Questions extends React.Component {
           },
           {
             question: 'Cuantas horas al dia usas estos transportes',
+          },
+          {
+            question: 'Cuantos viajes en avión haces en el año',
           },
         ],
       },
@@ -81,8 +85,7 @@ export default class Questions extends React.Component {
             <div>
               <QuestionCategory
                 key={i}
-                category={Object.keys(category).join('')}
-              />
+                category={Object.keys(category).join('')} questions={Object.values(category).flat(1)}/>
             </div>
           );
         })}
