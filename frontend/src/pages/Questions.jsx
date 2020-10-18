@@ -8,7 +8,8 @@ export default class Questions extends React.Component {
   state = {
     questions: [
       {
-        transport: [
+        category: 'transport',
+        content: [
           {
             question:
               'Cuanto dias a la semana usas cada uno de estos transportes',
@@ -32,9 +33,10 @@ export default class Questions extends React.Component {
         ],
       },
       {
-        food: [
+        category: 'food',
+        content: [
           {
-            question: 'Conque frecuencia consumes estos productos?',
+            question: 'Conque frecuencia consumes estos productos',
             answers: [
               {
                 foodModes: [
@@ -55,7 +57,8 @@ export default class Questions extends React.Component {
         ],
       },
       {
-        energy: [
+        category: 'energy',
+        content: [
           {
             question: 'Selecciona los equipos que tienes',
             answers: [
@@ -80,10 +83,11 @@ export default class Questions extends React.Component {
         ],
       },
       {
-        solutionsEcological: [
+        category: 'solutionsEcological',
+        content: [
           {
             question:
-              'Cuales de estas soluciones tienes instaladas en tu casa?',
+              'Cuales de estas soluciones tienes instaladas en tu casa',
             answers: [
               {
                 transportModes: [
@@ -121,25 +125,12 @@ export default class Questions extends React.Component {
         buttons={true}
         bullets={false}
         selected={this.state.selected}>
-        {/* {this.state.questions.map((questions, i) => {
-          return (
-            <div key={i}>
-              <QuestionsList
-                id={questions.id}
-                question={questions.question}
-                selected={i}
-                max={this.state.questions.length}
-                handleChangeQuestion={this.handleChangeQuestion}
-              />
-            </div>
-          );
-        })} */}
         {this.state.questions.map((category, i) => {
           return (
             <div key={i} className='slider'>
               <QuestionCategory
-                category={Object.keys(category).join('')}
-                questions={Object.values(category).flat(1)}
+                category={category.category}
+                questions={Object.values(category.content).flat(1)}
               />
             </div>
           );

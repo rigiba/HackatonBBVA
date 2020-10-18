@@ -10,7 +10,6 @@ export default class QuestionCategory extends React.Component {
   };
 
   handleChangeQuestion = async (e) => {
-    console.log(e);
     if (e >= this.state.max)
       return await this.setState({ selected: this.state.max - 1 });
     else if (e <= 0) return await this.setState({ selected: 0 });
