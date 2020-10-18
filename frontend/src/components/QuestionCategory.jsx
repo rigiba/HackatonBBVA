@@ -2,8 +2,6 @@ import React from 'react';
 import QuestionsList from '../components/QuestionsList';
 import AwesomeSlider from 'react-awesome-slider';
 
-
-
 export default class QuestionCategory extends React.Component {
   state = {
     background_color: null,
@@ -17,7 +15,7 @@ export default class QuestionCategory extends React.Component {
           {this.props.questions.map((question, i) => {
             return (
               <div key={i}>
-                <QuestionsList listquestions={this.props.questions[i]}/>
+                <QuestionsList listquestions={this.props.questions[i]} />
               </div>
             );
           })}
