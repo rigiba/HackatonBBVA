@@ -77,19 +77,12 @@ export default class Questions extends React.Component {
           );
         })} */}
         {this.state.questions.map((category, i) => {
-          // const { category } = Object.keys(category).join('');
-
-          // if (category === 'transport')
-          //   this.setState({ background_color: '#30697c' });
-          // else if (category === 'food')
-          //   this.setState({ background_color: '#28914b' });
-          // else if (category === 'energy')
-          //   this.setState({ background_color: '#912841' });
-          // else this.setState({ background_color: '#917328' });
-
           return (
-            <div key={i}>
-              <QuestionCategory category={Object.keys(category).join('')} />
+            <div>
+              <QuestionCategory
+                key={i}
+                category={Object.keys(category).join('')}
+              />
             </div>
           );
         })}
