@@ -8,7 +8,7 @@ export default class Questions extends React.Component {
   state = {
     questions: [
       {
-        category: 'transport',
+        category: 'Transporte',
         content: [
           {
             question:
@@ -31,9 +31,10 @@ export default class Questions extends React.Component {
             question: 'Cuantos viajes en avión haces en el año',
           },
         ],
+        color: '#3da9fc',
       },
       {
-        category: 'food',
+        category: 'Comida',
         content: [
           {
             question: 'Conque frecuencia consumes estos productos',
@@ -49,27 +50,28 @@ export default class Questions extends React.Component {
             ],
           },
           {
-            question: 'En que pais te encuentras',
+            question: 'En que país te encuentras',
           },
           {
             question: 'Con cuantas personas vives',
           },
         ],
+        color: '#abd1c6',
       },
       {
-        category: 'energy',
+        category: 'Energía',
         content: [
           {
             question: 'Selecciona los equipos que tienes',
             answers: [
               {
                 energyModes: [
-                  ['calefaccionElectrica', 5],
-                  ['aireAcondicionado', 0],
-                  ['duchaElectrica', 3],
-                  ['calentadorAgas', 0],
-                  ['estufaElectrica', 0],
-                  ['hornoElectrico', 0],
+                  ['Calefacción eléctrica', 5],
+                  ['Aire acondicionado', 0],
+                  ['Ducha eléctrica', 3],
+                  ['Calentador a gas', 0],
+                  ['Estufa eléctrica', 0],
+                  ['Horno eléctrico', 0],
                 ],
               },
             ],
@@ -81,42 +83,40 @@ export default class Questions extends React.Component {
             question: 'Cuantos viajes en avión haces en el año',
           },
         ],
+        color: '#ef4565',
       },
       {
-        category: 'solutionsEcological',
+        category: 'Soluciones Ecológicas',
         content: [
           {
-            question:
-              'Cuales de estas soluciones tienes instaladas en tu casa',
+            question: 'Cuales de estas soluciones tienes instaladas en tu casa',
             answers: [
               {
                 transportModes: [
-                  ['panelsolar', 5],
-                  ['ahorrodeagua', 0],
-                  ['bombilloahorradores', 3],
+                  ['Panel solar', 5],
+                  ['Ahorro de agua', 0],
+                  ['Bombillo ahorradores', 3],
                 ],
               },
             ],
           },
         ],
+        color: '#fff',
       },
     ],
 
     data: [],
 
-    max: 0,
     selected: 0,
   };
 
-  async componentDidMount() {
-    this.setState({ max: this.state.questions.length - 1 });
-  }
+  handleChangeCategory = async (e) => {
+    console.log(e);
 
-  handleChangeQuestion = async (e) => {
-    if (e >= this.state.max)
-      return await this.setState({ selected: this.state.max });
-    else if (e <= 0) return await this.setState({ selected: 0 });
-    await this.setState({ selected: e });
+    // if (e >= 3) return await this.setState({ selected: 3 });
+    // else if (e <= 0) return await this.setState({ selected: 0 });
+    // else await this.setState({ selected: e });
+    await this.setState({ selected: this.state.selected + 1 });
   };
 
   render() {
@@ -130,7 +130,10 @@ export default class Questions extends React.Component {
             <div key={i} className='slider'>
               <QuestionCategory
                 category={category.category}
-                questions={Object.values(category.content).flat(1)}
+                questions={Object.values(category.content)}
+                color={category.color}
+                selected={i}
+                handleChangeCategory={this.handleChangeCategory}
               />
             </div>
           );
